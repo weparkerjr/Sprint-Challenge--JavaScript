@@ -1,3 +1,5 @@
+/*************DONE*************/
+
 // ==== Objects ====
 
 /* 
@@ -137,7 +139,14 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(function(zooAnimals){
+  animalNames.push(`${zooAnimals.animal_name}, ${zooAnimals.scientific_name}`);
+})
 console.log(animalNames);
+
+/*****************************************************************
+*****        DONE ABOVE                                           
+*****************************************************************/
 
 /* Request 2: .map()    
 
@@ -146,24 +155,42 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+zooAnimals.map(function(zooAnimals){
+  lowerCase.push(zooAnimals.animal_name.toLowerCase());
+})
 console.log(lowerCase); 
+
+/*****************************************************************
+*****        DONE ABOVE                                           
+*****************************************************************/
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+const largerPopulation = zooAnimals.filter((animal_name) => {
+  return animal_name.population < 5;
+});
 console.log(largerPopulation);
+
+/*****************************************************************
+*****        DONE ABOVE                                           
+*****************************************************************/
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals.reduce((reduced, subtotal) => {
+  return reduced += subtotal.population;
+}, 0);
 console.log(populationTotal);
 
+/*****************************************************************
+*****        DONE ABOVE                                           
+*****************************************************************/
 
 /* 
 
