@@ -1,3 +1,5 @@
+/**************DONE***************/
+
 // ==== Callbacks ====  
 
 /* Step 1: Create a higher-order function that accepts a callback
@@ -50,7 +52,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Because of closure. The variable 'internal' is within the function scope of myFunction as is nestedFunction() so it can use the variable 'internal'.
 
 
 const external = "I'm outside the function";
@@ -65,3 +67,7 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
+/*****************************************************************
+*****        DONE ABOVE                                           
+*****************************************************************/
